@@ -61,6 +61,9 @@
 		0F72FBCE26C0F024001E8CED /* ComicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewController.swift; sourceTree = "<group>"; };
 		0F72FBE126C0F0BF001E8CED /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		0F72FBE226C0F0BF001E8CED /* MD5HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5HashTests.swift; sourceTree = "<group>"; };
+		0F72FBEC26C0F124001E8CED /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		0F72FBED26C0F124001E8CED /* UIView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		0F72FBEE26C0F124001E8CED /* UIViewController+ReuseIdentifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ReuseIdentifer.swift"; sourceTree = "<group>"; };
 		2876803832FAC7C321B02B04 /* Pods_MarvelComic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelComic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6845ACBB8571DA0B3D8D9669 /* Pods-MarvelComicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelComicTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelComicTests/Pods-MarvelComicTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D4609F87EDBDD394CBE7C28 /* Pods-MarvelComic-MarvelComicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelComic-MarvelComicUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelComic-MarvelComicUITests/Pods-MarvelComic-MarvelComicUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 			children = (
 				0F72FBC726C0EFC9001E8CED /* Models */,
 				0F72FBCB26C0F024001E8CED /* Controllers */,
+				0F72FBEB26C0F124001E8CED /* Extensions */,
 				0F72FB8D26C0EEB0001E8CED /* AppDelegate.swift */,
 				0F72FB8F26C0EEB0001E8CED /* SceneDelegate.swift */,
 				0F72FB9126C0EEB0001E8CED /* ViewController.swift */,
@@ -176,6 +180,16 @@
 				0F72FBCE26C0F024001E8CED /* ComicDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0F72FBEB26C0F124001E8CED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F72FBEC26C0F124001E8CED /* UIImageViewExtension.swift */,
+				0F72FBED26C0F124001E8CED /* UIView+ReuseIdentifier.swift */,
+				0F72FBEE26C0F124001E8CED /* UIViewController+ReuseIdentifer.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CD1ADF1872E03F23E3C5AB90 /* Pods */ = {
