@@ -138,11 +138,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YRB-gR-3Q1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="846"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uY4-2B-Qi6">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="682" translatesAutoresizingMaskIntoConstraints="NO" id="uY4-2B-Qi6">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="682"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="682" id="JVa-Xz-e0A"/>
-                                                </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lb-EI-Llj">
                                                 <rect key="frame" x="0.0" y="698" width="414" height="148"/>

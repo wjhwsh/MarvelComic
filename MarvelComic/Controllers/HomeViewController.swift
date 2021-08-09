@@ -13,12 +13,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var singleComicButton: UIButton!
     @IBOutlet weak var pickRandomComicButton: UIButton!
     @IBOutlet weak var showListsOfComicsButton: UIButton!
-    private var allComics = [Comic]()
-    private var service = Service()
+    private var viewModel = HomeViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        fetchComicList()
+        viewModel.fetchComicList {[weak self] (error) in
+            self?.updateView()
+        }
     }
 
     private func setupViews() {
@@ -30,15 +31,10 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func fetchComicList() {
-        service.fetchComicsLists {[weak self] (result) in
-            if case .success(let comicList) = result {
-                self?.allComics = comicList.data?.results ?? []
-                if let comicsCount = self?.allComics.count, comicsCount > 0 {
-                    self?.pickRandomComicButton.isEnabled = true
-                    self?.showListsOfComicsButton.isEnabled = true
-                }
-            }
+    private func updateView() {
+        if let comicCount = self.viewModel.comicList?.data?.results?.count, comicCount > 0 {
+            pickRandomComicButton.isEnabled = true
+            showListsOfComicsButton.isEnabled = true
         }
     }
     
@@ -49,9 +45,11 @@ class HomeViewController: UIViewController {
     }
     
     func showAllComics() {
-        let comicListVC = ComicListViewController.instantiate()
-        comicListVC.comics = self.allComics
-        self.navigationController?.pushViewController(comicListVC, animated: true)
+        if let allComics = self.viewModel.comicList?.data?.results {
+            let comicListVC = ComicListViewController.instantiate()
+            comicListVC.comics =  allComics
+            self.navigationController?.pushViewController(comicListVC, animated: true)
+        }
     }
     
     @IBAction func singleComicButtonTapped(_ sender: Any) {
@@ -68,7 +66,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func pickRandomComicButtonTapped(_ sender: Any) {
-         if let comic = self.allComics.randomElement() {
+        if let comic = self.viewModel.comicList?.data?.results?.randomElement() {
             self.textField.text = String(comic.id)
             showComic(comic)
         }
