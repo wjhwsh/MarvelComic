@@ -17,9 +17,10 @@ enum ServiceEndpoints: String {
     case comic = "https://gateway.marvel.com/v1/public/comics/{ID}"
 }
 
+//please visit https://developer.marvel.com/account to get your own Marvel APK public/private key
 class Service {
-    private static let privateKey = "b7abe282ab2a60f6a1a3c86b1be3c08e5cace1f4"
-    private static let publicKey = "49e59e86bf768dc0ffbe9020101ec62b"
+    private static let privateKey =  //please put your own Marvel API private key here
+    private static let publicKey =   //please put your own Marvel API public key here
    
     //fetch lists of Comics
     func fetchComicsLists(_ format: String = "comic", completionHandler: @escaping (Result<ComicList, Error>)->Void) {
