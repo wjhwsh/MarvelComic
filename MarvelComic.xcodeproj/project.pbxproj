@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0F72FB8E26C0EEB0001E8CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72FB8D26C0EEB0001E8CED /* AppDelegate.swift */; };
 		0F72FB9026C0EEB0001E8CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72FB8F26C0EEB0001E8CED /* SceneDelegate.swift */; };
 		0F72FB9226C0EEB0001E8CED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72FB9126C0EEB0001E8CED /* ViewController.swift */; };
-		0F72FB9526C0EEB0001E8CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72FB9326C0EEB0001E8CED /* Main.storyboard */; };
 		0F72FB9726C0EEB2001E8CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F72FB9626C0EEB2001E8CED /* Assets.xcassets */; };
 		0F72FB9A26C0EEB2001E8CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F72FB9826C0EEB2001E8CED /* LaunchScreen.storyboard */; };
 		0F72FBA526C0EEB2001E8CED /* MarvelComicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F72FBA426C0EEB2001E8CED /* MarvelComicTests.swift */; };
@@ -42,7 +41,6 @@
 		0F72FB8D26C0EEB0001E8CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F72FB8F26C0EEB0001E8CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0F72FB9126C0EEB0001E8CED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F72FB9426C0EEB0001E8CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F72FB9626C0EEB2001E8CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F72FB9926C0EEB2001E8CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F72FB9B26C0EEB2001E8CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +50,10 @@
 		0F72FBAB26C0EEB3001E8CED /* MarvelComicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelComicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F72FBAF26C0EEB3001E8CED /* MarvelComicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelComicUITests.swift; sourceTree = "<group>"; };
 		0F72FBB126C0EEB3001E8CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F72FBC626C0EF9A001E8CED /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0F72FBC826C0EFC9001E8CED /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		0F72FBC926C0EFC9001E8CED /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0F72FBCA26C0EFC9001E8CED /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		2876803832FAC7C321B02B04 /* Pods_MarvelComic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelComic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6845ACBB8571DA0B3D8D9669 /* Pods-MarvelComicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelComicTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelComicTests/Pods-MarvelComicTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D4609F87EDBDD394CBE7C28 /* Pods-MarvelComic-MarvelComicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelComic-MarvelComicUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelComic-MarvelComicUITests/Pods-MarvelComic-MarvelComicUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,11 +118,12 @@
 		0F72FB8C26C0EEB0001E8CED /* MarvelComic */ = {
 			isa = PBXGroup;
 			children = (
+				0F72FBC726C0EFC9001E8CED /* Models */,
 				0F72FB8D26C0EEB0001E8CED /* AppDelegate.swift */,
 				0F72FB8F26C0EEB0001E8CED /* SceneDelegate.swift */,
 				0F72FB9126C0EEB0001E8CED /* ViewController.swift */,
-				0F72FB9326C0EEB0001E8CED /* Main.storyboard */,
 				0F72FB9626C0EEB2001E8CED /* Assets.xcassets */,
+				0F72FBC626C0EF9A001E8CED /* Main.storyboard */,
 				0F72FB9826C0EEB2001E8CED /* LaunchScreen.storyboard */,
 				0F72FB9B26C0EEB2001E8CED /* Info.plist */,
 			);
@@ -145,6 +148,16 @@
 			path = MarvelComicUITests;
 			sourceTree = "<group>";
 		};
+		0F72FBC726C0EFC9001E8CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F72FBC826C0EFC9001E8CED /* Hash.swift */,
+				0F72FBC926C0EFC9001E8CED /* Service.swift */,
+				0F72FBCA26C0EFC9001E8CED /* Comic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CD1ADF1872E03F23E3C5AB90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +168,6 @@
 				BC7824186C63A5F8EEB5F9B7 /* Pods-MarvelComicTests.debug.xcconfig */,
 				6845ACBB8571DA0B3D8D9669 /* Pods-MarvelComicTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -279,7 +291,6 @@
 			files = (
 				0F72FB9A26C0EEB2001E8CED /* LaunchScreen.storyboard in Resources */,
 				0F72FB9726C0EEB2001E8CED /* Assets.xcassets in Resources */,
-				0F72FB9526C0EEB0001E8CED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,14 +456,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F72FB9326C0EEB0001E8CED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F72FB9426C0EEB0001E8CED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0F72FB9826C0EEB2001E8CED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
